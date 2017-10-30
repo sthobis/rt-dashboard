@@ -751,18 +751,73 @@
     (function($) {
         $(document).ready(function () {
 
+            var searchToggleTimeout;
             $(".search-icon-1").click(function () {
                 $(".search-panel-1").slideToggle();
+                $(".search-panel-1 .watchlist-Search-input").focus();
+                if ($("#top-header").hasClass("search-active")) {
+                // closing searchbar
+                    clearTimeout(searchToggleTimeout);
+                    $("#top-header").off(".searchToggle");
+                } else {
+                // opening searchbar
+                    $("#top-header")
+                    .on("mouseleave.searchToggle", function () {
+                        clearTimeout(searchToggleTimeout);
+                        searchToggleTimeout = setTimeout(function () {
+                           $(".search-panel-1").slideUp();
+                           $("#top-header").off(".searchToggle").removeClass("search-active");
+                        }, 3000);
+                    })
+                    .on("mouseenter.searchToggle", function () {
+                        clearTimeout(searchToggleTimeout);
+                    });
+                }
+                $("#top-header").toggleClass("search-active");
             });
             $(".search-icon-2").click(function () {
                 $(".search-panel-2").slideToggle();
+                $(".search-panel-2 .watchlist-Search-input").focus();
+                if ($("#docked-header").hasClass("search-active")) {
+                // closing searchbar
+                    clearTimeout(searchToggleTimeout);
+                    $("#docked-header").off(".searchToggle");
+                } else {
+                // opening searchbar
+                    $("#docked-header")
+                    .on("mouseleave.searchToggle", function () {
+                        clearTimeout(searchToggleTimeout);
+                        searchToggleTimeout = setTimeout(function () {
+                           $(".search-panel-2").slideUp();
+                           $("#docked-header").off(".searchToggle").removeClass("search-active");
+                        }, 3000);
+                    })
+                    .on("mouseenter.searchToggle", function () {
+                        clearTimeout(searchToggleTimeout);
+                    });
+                }
+                $("#docked-header").toggleClass("search-active");
             });
 
             $(window).scroll(function(){
                 if ($(this).scrollTop() > 200) {
                     $("#docked-header").fadeIn(500);
+                    if ($("#docked-header").hasClass("search-active")) {
+                        clearTimeout(searchToggleTimeout);
+                        searchToggleTimeout = setTimeout(function () {
+                           $(".search-panel-2").slideUp();
+                           $("#docked-header").off(".searchToggle").removeClass("search-active");
+                        }, 3000);
+                    }
                 } else {
                     $("#docked-header").fadeOut(500);
+                    if ($("top-header").hasClass("search-active")) {
+                        clearTimeout(searchToggleTimeout);
+                        searchToggleTimeout = setTimeout(function () {
+                           $(".search-panel-1").slideUp();
+                           $("#top-header").off(".searchToggle").removeClass("search-active");
+                        }, 3000);
+                    }
                 }
             });
             $(function () {
