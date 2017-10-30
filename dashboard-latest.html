@@ -754,13 +754,13 @@
             var searchToggleTimeout;
             $(".search-icon-1").click(function () {
                 $(".search-panel-1").slideToggle();
-                $(".search-panel-1 .watchlist-Search-input").focus();
                 if ($("#top-header").hasClass("search-active")) {
                 // closing searchbar
                     clearTimeout(searchToggleTimeout);
                     $("#top-header").off(".searchToggle");
                 } else {
                 // opening searchbar
+                    $(".search-panel-1 .watchlist-Search-input").focus();
                     $("#top-header")
                     .on("mouseleave.searchToggle", function () {
                         clearTimeout(searchToggleTimeout);
@@ -777,13 +777,13 @@
             });
             $(".search-icon-2").click(function () {
                 $(".search-panel-2").slideToggle();
-                $(".search-panel-2 .watchlist-Search-input").focus();
                 if ($("#docked-header").hasClass("search-active")) {
                 // closing searchbar
                     clearTimeout(searchToggleTimeout);
                     $("#docked-header").off(".searchToggle");
                 } else {
                 // opening searchbar
+                    $(".search-panel-2 .watchlist-Search-input").focus();
                     $("#docked-header")
                     .on("mouseleave.searchToggle", function () {
                         clearTimeout(searchToggleTimeout);
