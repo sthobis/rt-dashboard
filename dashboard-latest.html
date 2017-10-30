@@ -1,0 +1,827 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <link rel="canonical" href="https://www.research-tree.com" />
+    <title>Dashboard</title>
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' >
+    <link rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css" />
+    <link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link href="bower_components/jquery-ui/themes/base/jquery-ui.css" rel="stylesheet"/>
+    <link href="bower_components/foundation-icon-fonts/foundation-icons.css" rel="stylesheet"/>
+    <link href="content/master.css" rel="stylesheet"/>
+
+
+
+</head>
+<body>
+    
+<div class="MMenuWrapper">
+
+    <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+            <div id="outdated"></div>
+
+            <div id="general-modal-form" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+            </div>
+            <div id="login-modal-form" class="reveal-modal medium" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+            </div>
+
+            <div style="display: none">
+                <input type="file" value="" id="tinymce-image-input" style="display: none"/>
+            </div>
+
+            
+
+            
+    <header>
+    
+    <div id="top-header">
+        <div class="tab-bar hide-for-small" data-topbar role="navigation" data-options="scrolltop : true">
+                <section class="left">
+                    <ul class="nav-items">
+                        <li><a role="button" aria-expanded="false" aria-controls="idOfLeftMenu" class="menu-icon" href="#menu"><span></span></a></li>
+                        <li><a role="button" aria-expanded="false" aria-controls="idOfLeftMenu" class="search-icon-1" href="#search"><span></span></a></li>
+                    </ul>
+
+                </section>
+
+            <section class="middle tab-bar-section">
+                
+
+            </section>
+            <!-- Logged in -->
+
+
+        </div>
+        <div class="search-panel-1">
+            <section>
+                <!-- Search | has-form wrapper -->
+
+<form>
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <label for="search-terms" id="search-label" class="right inline">Search</label>
+                    </div>
+                    <div class="small-8 columns">
+                        <input id="site-add-company-input" class="watchlist-Search-input form-control" type="text" placeholder="Find a company or provider">
+                    </div>
+                    <div class="small-3 columns">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</form>
+            </section>
+        </div>
+    </div>    
+    
+        
+    
+
+
+        
+        <div class="tab-bar mobile show-for-small-only" data-topbar role="navigation" data-options=" scrolltop : true">
+                <div class="left-small">
+                    <a role="button" aria-expanded="false" aria-controls="idOfLeftMenu" class="menu-icon" href="#menu"><span></span></a>
+                </div>
+     
+
+        </div>
+    <div id="docked-header">
+        <div class="tab-bar">
+                <section class="left">
+                    <ul class="nav-items">
+                        <li><a role="button" aria-expanded="false" aria-controls="idOfLeftMenu" class="menu-icon" href="#menu"><span></span></a></li>
+                        <li><a role="button" aria-expanded="false" aria-controls="idOfLeftMenu" class="search-icon-2 hide-for-small-down" href="#search"><span></span></a></li>
+                    </ul>
+                </section>
+            <section class="middle tab-bar-section">
+                <ul class="sub-menu hide-for-small-down">
+
+                    
+                        <li><a href="/dashboard/feed">Dashboard</a></li>
+                        <li><a href="/researchhub">Research</a></li>
+                        <li><a href="/newsfeed">RNS/News</a></li>
+                        <li><a href="/providers">Providers</a></li>
+                        <li><a href="/history-ratings">History / Ratings</a></li>
+
+                </ul>
+                
+            </section>
+           
+        </div>
+        <div class="search-panel-2">
+            <section>
+                <!-- Search | has-form wrapper -->
+
+<form>
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <label for="search-terms" id="search-label" class="right inline">Search</label>
+                    </div>
+                    <div class="small-8 columns">
+                        <input id="site-add-company-input" class="watchlist-Search-input form-control" type="text" placeholder="Find a company or provider">
+                    </div>
+                    <div class="small-3 columns">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</form>
+            </section>
+        </div>
+
+    </div>
+
+</header>
+
+
+
+
+
+            <main role="main">
+
+                
+    <section id="navigation">
+    
+    <div class="row collapse hide-for-small">
+        <div class="large-12 columns">
+            <section class="top-bar-section">
+                <div class="main-nav-wrapper">
+                    <nav class="top-bar primary-nav hide-for-small-down left" data-topbar role="navigation">
+                        <ul>
+                            
+                            <li><a class="home" href="/home"><i class="fi-home"></i></a></li>
+
+
+                            
+                                <li class="has-dropdown ">
+
+                                    
+                                    <a>Regions</a>
+
+                                        <ul class="dropdown">
+
+                                                <li class=" ">
+
+                                                    <a href="/region/uk">UK</a>
+
+                                                </li>
+                                                <li class=" ">
+
+                                                    <a href="/region/rest-of-emea">Rest of EMEA</a>
+
+                                                </li>
+                                                <li class=" ">
+
+                                                    <a href="/region/n-america">N America</a>
+
+                                                </li>
+                                                <li class=" ">
+
+                                                    <a href="/region/apac">APAC</a>
+
+                                                </li>
+                                                <li class=" ">
+
+                                                    <a href="/region/latam">LatAm</a>
+
+                                                </li>
+
+                                        </ul>
+
+                                </li>
+                                <li class=" ">
+
+                                    
+                                    <a>Sectors</a>
+
+
+                                </li>
+                                <li class="has-dropdown ">
+
+                                    
+                                    <a>Small / Large Cap</a>
+
+                                        <ul class="dropdown">
+
+                                                <li class=" ">
+
+                                                    <a href="/marketcap/uk100">UK100</a>
+
+                                                </li>
+                                                <li class=" ">
+
+                                                    <a href="/marketcap/uk250">UK250</a>
+
+                                                </li>
+                                                <li class=" ">
+
+                                                    <a href="/marketcap/uk-smallcap">UK Smallcap</a>
+
+                                                </li>
+                                                <li class=" ">
+
+                                                    <a href="/marketcap/other">Other</a>
+
+                                                </li>
+
+                                        </ul>
+
+                                </li>
+                                <li class="has-dropdown ">
+
+                                    
+                                    <a>Providers</a>
+
+                                        <ul class="dropdown">
+
+                                                <li class=" ">
+
+                                                    <a href="/providers/edison">Edison</a>
+
+                                                </li>
+                                                <li class=" ">
+
+                                                    <a href="/providers/liberum">Liberum</a>
+
+                                                </li>
+                                                <li class=" ">
+
+                                                    <a href="/providers/panmure">Panmure</a>
+
+                                                </li>
+
+                                        </ul>
+
+                                </li>
+                                <li class="has-dropdown ">
+
+                                    
+                                    <a>Blogs</a>
+
+                                        <ul class="dropdown">
+
+                                                <li class=" ">
+
+                                                    <a href="/blogs/not-classified">Not Classified</a>
+
+                                                </li>
+
+                                        </ul>
+
+                                </li>
+
+                            
+                        </ul>
+                    </nav>
+                    
+              
+                </div>
+                </section>
+                
+        </div>
+    </div>
+
+
+
+
+</section>
+
+        
+ 
+
+
+
+
+                
+
+
+
+
+<section id="content" data-equalizer="main-page-cols">
+    <div class="row collapse">
+    <div id="filters-section" class="small-12 columns contain-to-grid">
+        <a href="#" data-options="align:bottom" data-dropdown="drop" class="button show-for-small-only">Filters &raquo;</a>
+
+        <ul id="drop" class="button-group filters even-5 " data-dropdown-content tabindex="-1" role="menu" aria-hidden="false" aria-autoclose="false">
+            <li>
+                <input id="chk-company-note" class="filter-checkbox reports" type="checkbox" checked>
+                <label class="button secondary" for="chk-company-note"><span>Company notes</span></label>
+            </li>
+            <li>
+                <input id="chk-daily-note" class="filter-checkbox news" type="checkbox" checked>
+                <label class="button secondary" for="chk-daily-note"><span>Daily notes</span></label>
+            </li>
+            <li>
+                
+                <input id="chk-macro-note" class="filter-checkbox macro" type="checkbox">
+                <label class="button secondary" for="chk-macro-note"><span>Macro notes</span></label>
+            </li>
+            <li>
+                
+                <input id="chk-announcement-note" class="filter-checkbox announcement" type="checkbox" >
+                <label class="button secondary" for="chk-announcement-note"><span>RNS / Releases</span></label>
+            </li>
+            <li>
+                <input id="chk-media-note" class="filter-checkbox media" type="checkbox" checked>
+                <label class="button secondary" for="chk-media-note"><span>Video / Audio</span></label>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+<div data-sticky_parent>
+<div id="column-side" class="secondary-column columns large-3 medium-6 small-12" data-equalizer-watch="main-page-cols">
+    <div id="column-side-l" data-sticky_column>
+        <div class="article">
+            <div class="row">
+                <div class="columns small-8">
+                    <h3 id="WatchListCompaniesheader" class="title">Watchlist</h3>
+                </div>
+                <div class="columns small-4">
+                    <fieldset class="switch" tabindex="0">
+                        <input id="exampleCheckboxSwitch" type="checkbox">
+                        <label for="exampleCheckboxSwitch">
+                            <span class="switch-off">Edit</span>
+                        </label>
+                    </fieldset> 
+                </div>
+            </div>
+        <div class="row watchlist collapse">
+            <div class="large-12 columns">
+                <ul class="watchlist-labels">
+                    <li>% Chg</li>
+                    <li>Price</li>
+
+                </ul>
+                <ul id="numero2" class="swipe-list ">
+                  
+                     <li>
+                            <button class="watchlist-delete" data-company-name="ABZENA PLC" data-cid="GB00BN65QN46">
+                                <i class="fi-x"></i>
+                            </button>
+                            <a href="">
+                                <span class="swipe"></span>
+                                <span class="desc">ABZENA PLC</span>
+
+                                    <div class="share-price">
+                                        <span class="label grey">71.0</span>
+                                        <span class="label grey">0.0%</span>
+                                    </div>
+
+
+                            </a>
+                        </li>
+                        <li>
+                            <button class="watchlist-delete" data-company-name="ACAL PLC" data-cid="GB0000055888">
+                                <i class="fi-x"></i>
+                            </button>
+                            <a href="">
+                                <span class="swipe"></span>
+                                <span class="desc">ACAL PLC</span>
+
+                                    <div class="share-price">
+                                        <span class="label grey">264.5</span>
+                                        <span class="label grey">0.5%</span>
+                                    </div>
+
+
+                            </a>
+                        </li>
+                    <li>
+                            <button class="watchlist-delete" data-company-name="ABZENA PLC" data-cid="GB00BN65QN46">
+                                <i class="fi-x"></i>
+                            </button>
+                            <a href="">
+                                <span class="swipe"></span>
+                                <span class="desc">ABZENA PLC</span>
+
+                                    <div class="share-price">
+                                        <span class="label grey">71.0</span>
+                                        <span class="label grey">0.0%</span>
+                                    </div>
+
+
+                            </a>
+                        </li>
+                        <li>
+                            <button class="watchlist-delete" data-company-name="ACAL PLC" data-cid="GB0000055888">
+                                <i class="fi-x"></i>
+                            </button>
+                            <a href="">
+                                <span class="swipe"></span>
+                                <span class="desc">ACAL PLC</span>
+
+                                    <div class="share-price">
+                                        <span class="label grey">264.5</span>
+                                        <span class="label grey">0.5%</span>
+                                    </div>
+
+
+                            </a>
+                        </li>
+                     <li>
+                            <button class="watchlist-delete" data-company-name="ACAL PLC" data-cid="GB0000055888">
+                                <i class="fi-x"></i>
+                            </button>
+                            <a href="">
+                                <span class="swipe"></span>
+                                <span class="desc">ACAL PLC</span>
+
+                                    <div class="share-price">
+                                        <span class="label grey">264.5</span>
+                                        <span class="label grey">0.5%</span>
+                                    </div>
+
+
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+
+
+       
+  
+
+
+
+    </div>
+</div>
+<div class="main-column columns large-6 medum-6 hide-for-small" data-equalizer-watch="main-page-cols">
+            <div id="column-main">
+                
+
+
+            </div>
+        </div>
+<div class="secondary-column columns large-3 hide-for-medium hide-for-small" data-equalizer-watch="main-page-cols">
+            <div id="column-side-r" data-sticky_column>
+            
+            </div>
+        </div>
+    </div>
+</section>
+
+
+                <!--end:off canvas menus-->
+                
+                
+
+            </main><!--end:content-->
+
+
+            <input type="hidden" id="heap_id" value="nick.lamb@joondaloop.co.uk"/>
+
+                        <!--start:off canvas menus-->
+
+            <aside class="right-off-canvas-menu">
+                
+            </aside>
+
+
+            <a class="exit-off-canvas"></a>
+        </div>
+    </div>
+</div><!--eof page wrapper-->
+
+    
+<nav id="menu" style="display: none">
+    <ul>
+        
+        <!-- Research Tree section -->
+        <!-- Home -->
+        
+        <li id="input">
+            <input id="mobile-add-company-input" class="watchlist-Search-input form-control" type="text" placeholder="Find a company">
+        </li>
+        <li><a href="/">Home</a></li>
+                <!-- Dashboard -->
+            <li class="show-for-large-up"><a href="/dashboard/feed">Dashboard</a></li>
+            <li class="show-for-medium-down"><a href="/dashboard/feed">My Feed</a></li>
+            <li  class="show-for-medium-down"><a href="/dashboard/Watchlist">Watchlist</a></li>
+            <li ><a href="/newsfeed">RNS/News</a></li>
+        <!-- Hubs -->
+            <li>
+                <span>Hubs</span>
+                <ul>
+                    <li><a href="/researchhub">Research Hub</a></li>
+                    <li><a href="/companies">Company Hub</a></li>
+                    <li><a href="/history-ratings">History/Ratings</a></li>
+                </ul>
+            </li>
+                <!-- Admin -->
+                <li>
+                    <span>Admin</span>
+
+                    <ul>
+                        <li><a href="/Admin/UserAdminHub">User Admin</a></li>
+                        <li><a href="/ContentProviderAdmin/ContentProviders">Content Provider Admin</a></li>
+                        <li><a href="/Admin/SuggestedQuestionSummary">Suggested Questions Admin</a></li>
+                        <li><a href="/ResearchTreeNews/Admin">News Admin</a></li>
+                        <li><a href="/Campaign/Index">Campaign Admin</a></li>
+                        <li><a href="/PlatformHealth/Index">Platform Health</a></li>
+                        <li><a href="/Report">Admin Reports</a></li>
+                        <li><a href="/ImageLibrary/TaggedImageHub">Image Hub</a></li>
+                        <li><a href="/BlogType/Index">Blog Categories</a></li>
+                        <li><a href="/Admin/UploadSitemap">Upload Sitemap</a></li>
+                        <li><a href="/SyndicatePartner/Index">Syndicate Partner Admin</a></li>
+                        <li><a href="/Admin/AnnouncementFilterHub">RNS Filters</a></li>
+                     </ul>
+                </li>
+        <li class="title"><strong>Research</strong></li>
+            <li>
+
+               <span>Regions</span>
+
+                    <ul>
+
+                            <li class="">
+                              
+                                <a href="/region/uk">UK</a>
+                             
+
+                                
+
+                            </li>
+                            <li class="">
+                              
+                                <a href="/region/rest-of-emea">Rest of EMEA</a>
+                             
+
+                                
+
+                            </li>
+                            <li class="">
+                              
+                                <a href="/region/n-america">N America</a>
+                             
+
+                                
+
+                            </li>
+                            <li class="">
+                              
+                                <a href="/region/apac">APAC</a>
+                             
+
+                                
+
+                            </li>
+                            <li class="">
+                              
+                                <a href="/region/latam">LatAm</a>
+                             
+
+                                
+
+                            </li>
+                    </ul>
+
+            </li>
+            <li>
+
+               <span>Sectors</span>
+
+
+            </li>
+            <li>
+
+               <span>Small / Large Cap</span>
+
+                    <ul>
+
+                            <li class="">
+                              
+                                <a href="/marketcap/uk100">UK100</a>
+                             
+
+                                
+
+                            </li>
+                            <li class="">
+                              
+                                <a href="/marketcap/uk250">UK250</a>
+                             
+
+                                
+
+                            </li>
+                            <li class="">
+                              
+                                <a href="/marketcap/uk-smallcap">UK Smallcap</a>
+                             
+
+                                
+
+                            </li>
+                            <li class="">
+                              
+                                <a href="/marketcap/other">Other</a>
+                             
+
+                                
+
+                            </li>
+                    </ul>
+
+            </li>
+            <li>
+
+               <span>Providers</span>
+
+                    <ul>
+
+                            <li class="">
+                              
+                                <a href="/providers/edison">Edison</a>
+                             
+
+                                
+
+                            </li>
+                            <li class="">
+                              
+                                <a href="/providers/liberum">Liberum</a>
+                             
+
+                                
+
+                            </li>
+                            <li class="">
+                              
+                                <a href="/providers/panmure">Panmure</a>
+                             
+
+                                
+
+                            </li>
+                    </ul>
+
+            </li>
+            <li>
+
+               <span>Blogs</span>
+
+                    <ul>
+
+                            <li class="">
+                              
+                                <a href="/blogs/not-classified">Not Classified</a>
+                             
+
+                                
+
+                            </li>
+                    </ul>
+
+            </li>
+
+
+        
+                <!-- User account section -->
+        
+        <!-- Profile -->
+       
+       
+
+    </ul>
+</nav>
+
+
+
+
+<!-- End: Footers -->
+
+
+
+
+<script src="bower_components/modernizr/modernizr.js"></script>
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.js"></script>
+
+<script src="bower_components/jquery-validation/dist/jquery.validate.js"></script>
+<script src="bower_components/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+<script src="bower_components/foundation/js/foundation.js"></script>
+<script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+
+<script src="bower_components/jquery-ui/jquery-ui.js"></script>
+<script src="bower_components/foundation-datepicker/js/foundation-datepicker.js"></script>
+<script src="bower_components/datatables/media/js/jquery.dataTables.js"></script>
+<script src="bower_components/datatables-scroller/js/dataTables.scroller.js"></script>
+<script src="bower_components/jquery.cookiebar/jquery.cookiebar.js"></script>
+
+<script src="bower_components/jQuery.mmenu/dist/js/jquery.mmenu.all.min.js"></script>
+<script src="bower_components/jQuery.mmenu/src/jquery.mmenu.debugger.js"></script>
+<script src="bower_components/sticky-kit/jquery.sticky-kit.js"></script>
+<script src="bower_components/jquery-dotdotdot/src/js/jquery.dotdotdot.js"></script>
+<script src="bower_components/waypoints/lib/jquery.waypoints.js"></script>
+<script src="bower_components/hammerjs/hammer.js"></script>
+<script src="bower_components/jquery-hammerjs/jquery.hammer.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+    (function($) {
+        $(document).ready(function () {
+
+            $(".search-icon-1").click(function () {
+                $(".search-panel-1").slideToggle();
+            });
+            $(".search-icon-2").click(function () {
+                $(".search-panel-2").slideToggle();
+            });
+
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 200) {
+                    $("#docked-header").fadeIn(500);
+                } else {
+                    $("#docked-header").fadeOut(500);
+                }
+            });
+            $(function () {
+
+
+            // Swipe list
+            $('.swipe-list > li').hammer().on("swiperight", function (event) {
+                $(event.target).closest("li").addClass("swiped");
+            });
+
+            $('.swipe-list > li').hammer().on("swipeleft", function (event) {
+                $(event.target).closest("li").removeClass("swiped");
+            });
+
+            // Hack to get off-canvas .menu-icon to fire on iOS
+            $('.menu-icon').click(function () {
+                false
+            });
+
+            });
+
+        });
+    })(jQuery);
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    $(document)
+        .ready(function() {
+            var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+            var isFirefox = typeof InstallTrigger !== 'undefined';
+            var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+            var isChrome = !!window.chrome && !!window.chrome.webstore;
+
+            if (isOpera == true) {
+                $("body").addClass('opera');
+            }
+
+            if (isFirefox == true) {
+                $("body").addClass('firefox');
+            }
+
+            if (isSafari == true) {
+                $("body").addClass('safari');
+            }
+
+            if (isChrome == true) {
+                $("body").addClass('chrome');
+            }
+        });
+</script>
+<!-- Instantiate vUnit.js passing a CSSMap with properties you want to play with -->
+<!-- End: page scripts -->
+<!-- End Browser Link -->
+
+</body>
+
+</html>
